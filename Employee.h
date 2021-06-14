@@ -32,6 +32,9 @@ public:
     //function to calculate the salary
     virtual int calculateSalary();
 
+    //function to calculate how efficient our employee is
+    int efficiency();
+
 };
 
 

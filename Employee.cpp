@@ -71,3 +71,11 @@ int Employee::calculateSalary() {
 
     return salary;
 }
+
+//function to calculate how efficient our employee is
+int Employee::efficiency() {
+    int efficiency;
+    efficiency = (workDone / workToDo) / hourWork ;
+
+    return efficiency;
+}
