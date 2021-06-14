@@ -91,3 +91,13 @@ void Company::changeBoss() {
         }
     }
 }
+
+//gifting some hourWork
+void Company::gift() {
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        if(employee[i]->getId().substr(0,2) < "90")
+            employee[i]->setHourWork(employee[i]->getHourWork() + 5);
+        if (employee[i] == maxEfficiency())
+            employee[i]->setHourWork(employee[i]->getHourWork() + 10);
+    }
+}

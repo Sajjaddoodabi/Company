@@ -38,6 +38,9 @@ public:
 
     //changing inefficient boss
     void changeBoss();
+
+    //gifting some hourWork
+    void gift();
 };
 
 
