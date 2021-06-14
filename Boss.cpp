@@ -26,11 +26,31 @@ void Boss::setNumberOfEmployees(int noe) {
     numberOfEmployees = noe;
 }
 
-//calculate salary (override) 
+//calculate salary (override)
 int Boss::calculateSalary() {
     int salary = Employee::calculateSalary();
 
     salary += ((15 * salary) / 100);
 
     return salary;
+}
+
+//input output operators
+ostream &operator<<(ostream &strm, const Boss &boss) {
+    strm << static_cast<const Employee &>(boss);
+
+    cout << "numberOfEmployees :";
+    strm << boss.numberOfEmployees;
+    cout << endl;
+
+    return strm;
+}
+
+istream &operator>>(istream &strm, Boss &boss) {
+    strm >> static_cast<Employee &>(boss);
+
+    cout << "numberOfEmployees :";
+    strm >> boss.numberOfEmployees;
+
+    return strm;
 }

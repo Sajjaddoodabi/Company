@@ -23,6 +23,10 @@ public:
     //calculate salary (override)
     int calculateSalary() override;
 
+    //input output operators
+    friend ostream& operator << (ostream& , const Boss&);
+    friend istream& operator >> (istream& , Boss&);
+
 };
 
 
