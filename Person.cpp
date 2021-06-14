@@ -15,3 +15,29 @@ Person::Person(const Person &person) {
     id = person.id;
     address = person.address;
 }
+
+//getter
+string Person::getName() {
+    return name;
+}
+
+string Person::getId() {
+    return id;
+}
+
+Address Person::getAddress() {
+    return address;
+}
+
+//setter
+void Person::setName(const string &na) {
+    name = na;
+}
+
+void Person::setId(const string &i) {
+    id = i;
+}
+
+void Person::setAddress(const Address &address1) {
+    address = address1;
+}

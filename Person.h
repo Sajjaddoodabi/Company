@@ -19,6 +19,16 @@ public:
 
     //copy constructor
     Person(const Person&);
+
+    //getter
+    string getName();
+    string getId();
+    Address getAddress();
+
+    //setter
+    void setName(const string &);
+    void setId(const string &);
+    void setAddress(const Address &);
 };
 
 
