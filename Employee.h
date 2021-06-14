@@ -3,12 +3,19 @@
 
 #include "Person.h"
 
-class Employee {
+class Employee : Person {
 private:
     int hourWork;
     int salaryPerHour;
     int workToDo;
     int workDone;
+public:
+    //constructors
+    Employee();
+    Employee(const string & name , const string & id , const Address &address1 , int hw , int sph , int wtd , int wd);
+
+    //copy constructor
+    Employee(const Employee &);
 };
 
 
