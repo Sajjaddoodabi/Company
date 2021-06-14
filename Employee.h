@@ -38,6 +38,10 @@ public:
     //overriding validate function
     bool validate(string id) override;
 
+    //input output operators
+    friend ostream& operator << (ostream& , const Employee&);
+    friend istream& operator >> (istream& , Employee&);
+
 };
 
 

@@ -92,3 +92,46 @@ bool Employee::validate(string id) {
 
     return Person::validate(id1);
 }
+
+//input output operators
+ostream &operator<<(ostream &strm, const Employee &employee) {
+
+    strm << static_cast<const Person &>(employee);
+
+    cout << "hourWork: ";
+    strm << employee.hourWork;
+    cout << endl;
+
+    cout << "salaryPerHour: ";
+    strm << employee.salaryPerHour;
+    cout << endl;
+
+    cout << "workToDo: ";
+    strm << employee.workToDo;
+    cout << endl;
+
+    cout << "workDone: ";
+    strm << employee.workDone;
+    cout << endl;
+
+    return strm;
+}
+
+istream &operator>>(istream &strm, Employee &employee) {
+
+    strm >> static_cast<Person &>(employee);
+
+    cout << "hourWork: ";
+    strm >> employee.hourWork;
+
+    cout << "salaryPerHour: ";
+    strm >> employee.salaryPerHour;
+
+    cout << "workToDo: ";
+    strm >> employee.workToDo;
+
+    cout << "workDone: ";
+    strm >> employee.workDone;
+
+    return strm;
+}
