@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/sajja/CLionProjects/Company/Address.cpp">
+			<Option target="Company"/>
+		</Unit>
+		<Unit filename="C:/Users/sajja/CLionProjects/Company/Address.h">
+			<Option target="Company"/>
+		</Unit>
 		<Unit filename="C:/Users/sajja/CLionProjects/Company/main.cpp">
 			<Option target="Company"/>
 		</Unit>

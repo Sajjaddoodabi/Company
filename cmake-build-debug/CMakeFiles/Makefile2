@@ -92,12 +92,12 @@ clean: CMakeFiles/Company.dir/clean
 CMakeFiles/Company.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\sajja\CLionProjects\Company\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Company"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\sajja\CLionProjects\Company\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target Company"
 .PHONY : CMakeFiles/Company.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Company.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sajja\CLionProjects\Company\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sajja\CLionProjects\Company\cmake-build-debug\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Company.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sajja\CLionProjects\Company\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Company.dir/rule

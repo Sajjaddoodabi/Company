@@ -141,6 +141,33 @@ Company/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/build
 .PHONY : Company/fast
 
+Address.obj: Address.cpp.obj
+
+.PHONY : Address.obj
+
+# target to build an object file
+Address.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Address.cpp.obj
+.PHONY : Address.cpp.obj
+
+Address.i: Address.cpp.i
+
+.PHONY : Address.i
+
+# target to preprocess a source file
+Address.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Address.cpp.i
+.PHONY : Address.cpp.i
+
+Address.s: Address.cpp.s
+
+.PHONY : Address.s
+
+# target to generate assembly for a file
+Address.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Address.cpp.s
+.PHONY : Address.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -177,6 +204,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Company
+	@echo ... Address.obj
+	@echo ... Address.i
+	@echo ... Address.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
