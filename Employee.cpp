@@ -135,3 +135,15 @@ istream &operator>>(istream &strm, Employee &employee) {
 
     return strm;
 }
+
+//assign operator
+Employee &Employee::operator=(const Employee &employee) {
+    Person::operator=(employee);
+
+    hourWork = employee.hourWork;
+    salaryPerHour = employee.salaryPerHour;
+    workToDo = employee.workToDo;
+    workDone = employee.workDone;
+
+    return *this;
+}

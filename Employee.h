@@ -42,6 +42,9 @@ public:
     friend ostream& operator << (ostream& , const Employee&);
     friend istream& operator >> (istream& , Employee&);
 
+    //assign operator
+    Employee& operator = (const Employee &);
+
 };
 
 
