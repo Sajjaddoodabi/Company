@@ -11,6 +11,10 @@ Employee::Employee() : Person() {
 Employee::Employee(const string &name , const string &id ,const Address &address1 , int hw, int sph, int wtd, int wd)
         : Person( name ,  id ,  address1 ) {
 
+    setHourWork(hw);
+    setSalaryPerHour(sph);
+    setWorkDone(wd);
+    setWorkToDo(wtd);
 }
 
 //copy constructor
