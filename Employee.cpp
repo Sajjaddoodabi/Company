@@ -121,13 +121,13 @@ istream &operator>>(istream &strm, Employee &employee) {
 
     strm >> static_cast<Person &>(employee);
 
-    cout << "hourWork: ";
+    cout << "hourWork:";
     strm >> employee.hourWork;
 
-    cout << "salaryPerHour: ";
+    cout << "salaryPerHour:";
     strm >> employee.salaryPerHour;
 
-    cout << "workToDo: ";
+    cout << "workToDo:";
     strm >> employee.workToDo;
 
     cout << "workDone: ";

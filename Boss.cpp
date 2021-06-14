@@ -49,7 +49,7 @@ ostream &operator<<(ostream &strm, const Boss &boss) {
 istream &operator>>(istream &strm, Boss &boss) {
     strm >> static_cast<Employee &>(boss);
 
-    cout << "numberOfEmployees :";
+    cout << "numberOfEmployees:";
     strm >> boss.numberOfEmployees;
 
     return strm;

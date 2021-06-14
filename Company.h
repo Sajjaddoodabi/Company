@@ -13,6 +13,7 @@ private:
     Boss *boss;
 public:
     //constructor
+    Company();
     Company(int budget, Boss *boss1, Employee **employee1);
 
     //copy constructor
@@ -51,6 +52,9 @@ public:
     //filing details
     void writeOnFile();
 
+    //io operation
+    friend ostream &operator<<(ostream &, const Company &);
+    friend istream &operator>>(istream &, Company &);
 };
 
 

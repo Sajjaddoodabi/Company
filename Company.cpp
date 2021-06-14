@@ -1,5 +1,16 @@
 #include "Company.h"
 
+
+Company::Company() {
+    budget = 0;
+    boss = new Boss();
+
+    employee = new Employee*;
+//    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+//            employee[i] = new Employee(*employee[i]);
+//    }
+}
+
 Company::Company(int budget, Boss *boss1, Employee **employee1) {
     this->budget = budget;
 
@@ -53,7 +64,7 @@ void Company::setBoss(Boss *boss1) {
     boss = boss1;
 }
 
-void Company::setEmployee(Employee** employee1) {
+void Company::setEmployee(Employee **employee1) {
     employee = employee1;
 }
 
@@ -83,9 +94,11 @@ void Company::changeBoss() {
         for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
             if (employee[i] == maxEfficiency()) {
                 int numberOfEmployee = boss->getNumberOfEmployees();
-                Employee *temp = boss;
-                boss = dynamic_cast<Boss *>(employee[i]);
-                employee[i] = temp;
+
+                Employee *temp = employee[i];
+                employee[i] = static_cast<Employee *>(boss);
+                setBoss(dynamic_cast<Boss *>(temp));
+
                 boss->setNumberOfEmployees(numberOfEmployee);
                 break;
             }
@@ -97,7 +110,7 @@ void Company::changeBoss() {
 //gifting some hourWork
 void Company::gift() {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
-        if(employee[i]->getId().substr(0 , 2) < "90")
+        if (employee[i]->getId().substr(0, 2) < "90")
             employee[i]->setHourWork(employee[i]->getHourWork() + 5);
         if (employee[i] == maxEfficiency())
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);
@@ -131,4 +144,36 @@ void Company::writeOnFile() {
         save << employee[i]->getName() << employee[i]->getId() << employee[i]->efficiency() <<
              employee[i]->calculateSalary();
     }
+}
+
+
+
+ostream &operator<<(ostream &strm, const Company &company) {
+
+    cout << "Boss" << endl;
+    strm << *company.boss;
+    cout << "----------------------------" << endl;
+
+    for (int i = 0; i < company.boss->getNumberOfEmployees(); ++i) {
+                cout << "employee[" << i + 1 << ']' << endl;
+                strm << *company.employee[i] << endl;
+                cout << "----------------------------" << endl;
+            }
+        }
+}
+    return strm;
+}
+
+istream &operator>>(istream &strm, Company &company) {
+    cout << "the budget: ";
+    strm >> company.budget;
+
+    cout << "boss:" << endl;
+    strm >> *company.boss;
+
+    for (int i = 0; i < company.boss->getNumberOfEmployees(); ++i) {
+        cout << i + 1 << " employee:" << endl;
+        strm >> *company.employee[i];
+    }
+    return strm;
 }

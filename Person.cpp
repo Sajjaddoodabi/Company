@@ -131,13 +131,13 @@ ostream &operator<<(ostream &strm, const Person &person) {
 }
 
 istream &operator>>(istream &strm, Person &person) {
-    cout << "name: ";
+    cout << "name:";
     strm >> person.name;
 
-    cout << "id: ";
+    cout << "id:";
     strm >> person.id;
 
-    cout << "address: ";
+    cout << "address:" << endl;
     strm >> person.address;
 
     return strm;

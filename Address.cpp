@@ -47,13 +47,13 @@ ostream &operator<<(ostream &strm, const Address &address) {
 }
 
 istream &operator>>(istream &strm, Address &address) {
-    cout << "country : " << endl;
+    cout << "country:";
     strm >> address.country;
 
-    cout << "city : " << endl;
+    cout << "city:";
     strm >> address.city;
 
-    cout << "street : " << endl;
+    cout << "street:";
     strm >> address.street;
 
     return strm;
