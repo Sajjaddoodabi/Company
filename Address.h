@@ -25,6 +25,10 @@ public:
     void setCountry(const string &);
     void setCity(const string &);
     void setStreet(const string &);
+
+    //input output operators
+    friend ostream& operator << (ostream& , const Address&);
+    friend istream& operator >> (istream& , Address&);
 };
 
 
