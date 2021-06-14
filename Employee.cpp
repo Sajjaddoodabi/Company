@@ -59,3 +59,15 @@ void Employee::setWorkToDo(int wtd) {
 void Employee::setWorkDone(int wd) {
     workDone = wd;
 }
+
+//function to calculate the salary
+int Employee::calculateSalary() {
+    int salary;
+    int wtd = workToDo;
+    int wd = workDone;
+
+    salary = (hourWork * salaryPerHour);
+    salary -= ((wd * salary / wtd));
+
+    return salary;
+}

@@ -28,6 +28,10 @@ public:
     void setSalaryPerHour(int);
     void setWorkToDo(int);
     void setWorkDone(int);
+
+    //function to calculate the salary
+    virtual int calculateSalary();
+
 };
 
 
