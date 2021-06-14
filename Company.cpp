@@ -18,6 +18,7 @@ Company::Company(const Company &company) {
     employee = new Employee *[boss->getNumberOfEmployees()];
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
         employee[i] = new Employee(*company.employee[i]);
+
     }
 }
 
@@ -92,10 +93,11 @@ void Company::changeBoss() {
     }
 }
 
+
 //gifting some hourWork
 void Company::gift() {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
-        if(employee[i]->getId().substr(0,2) < "90")
+        if(employee[i]->getId().substr(0 , 2) < "90")
             employee[i]->setHourWork(employee[i]->getHourWork() + 5);
         if (employee[i] == maxEfficiency())
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);

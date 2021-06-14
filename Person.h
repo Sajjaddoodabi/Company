@@ -12,10 +12,8 @@ protected:
     string id;
     Address address;
 public:
-
     //constructors
     Person();
-
     Person(const string &na, const string &i, const Address &address1);
 
     //copy constructor
@@ -44,6 +42,7 @@ public:
 
     //assign operators
     virtual Person& operator = (const Person &);
+
 
 };
 

@@ -3,7 +3,7 @@
 
 #include "Person.h"
 
-class Employee : Person {
+class Employee : public Person {
 private:
     int hourWork;
     int salaryPerHour;
