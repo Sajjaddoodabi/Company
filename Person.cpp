@@ -41,6 +41,8 @@ void Person::setName(const string &na) {
     name = na;
 }
 
+//check the id in in setId instead of constructor
+//because if anyone wants to edit a id , they need to enter valid id
 void Person::setId(const string &i) {
     bool isOk = validate(i);
     if (isOk)
