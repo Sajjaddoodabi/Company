@@ -42,7 +42,13 @@ void Person::setName(const string &na) {
 }
 
 void Person::setId(const string &i) {
-    id = i;
+    bool isOk = validate(i);
+    if (isOk)
+        id = i;
+    else {
+        cout << "invalid id" << endl;
+        exit(1);
+    }
 }
 
 void Person::setAddress(const Address &address1) {
