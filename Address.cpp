@@ -58,3 +58,12 @@ istream &operator>>(istream &strm, Address &address) {
 
     return strm;
 }
+
+//assign operator
+Address &Address::operator=(Address address){
+    country = address.country;
+    city = address.city;
+    street = address.street;
+
+    return *this;
+}

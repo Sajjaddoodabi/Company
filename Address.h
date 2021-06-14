@@ -29,6 +29,9 @@ public:
     //input output operators
     friend ostream& operator << (ostream& , const Address&);
     friend istream& operator >> (istream& , Address&);
+
+    //assign operator
+    Address& operator = (Address address);
 };
 
 
