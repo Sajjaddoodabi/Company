@@ -35,6 +35,9 @@ public:
     //function to calculate how efficient our employee is
     int efficiency();
 
+    //overriding validate function
+    bool validate(string id) override;
+
 };
 
 

@@ -79,3 +79,16 @@ int Employee::efficiency() {
 
     return efficiency;
 }
+
+//validate function(override)
+bool Employee::validate(string id) {
+    char id1[10];
+    strcpy(id1, id.c_str());
+
+    if (id1[2] != '*') {
+        cout << "3rd character should be *! " << endl;
+        return false;
+    }
+
+    return Person::validate(id1);
+}
