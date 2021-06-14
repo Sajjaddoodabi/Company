@@ -29,3 +29,29 @@ Company::~Company() {
 
     delete boss;
 }
+
+//getter
+int Company::getBudget() {
+    return budget;
+}
+
+Boss *Company::getBoss() {
+    return boss;
+}
+
+Employee **Company::getEmployee() {
+    return employee;
+}
+
+//setter
+void Company::setBudget(int budget) {
+    this->budget = budget;
+}
+
+void Company::setBoss(Boss *boss1) {
+    boss = boss1;
+}
+
+void Company::setEmployee(Employee** employee1) {
+    employee = employee1;
+}

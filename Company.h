@@ -19,6 +19,16 @@ public:
 
     //destructor
     ~Company();
+
+    //getter
+    int getBudget();
+    Boss *getBoss();
+    Employee **getEmployee();
+
+    //setter
+    void setBudget(int);
+    void setBoss(Boss *);
+    void setEmployee(Employee**);
 };
 
 
