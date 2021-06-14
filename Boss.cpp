@@ -54,3 +54,11 @@ istream &operator>>(istream &strm, Boss &boss) {
 
     return strm;
 }
+
+//assign operator
+Boss &Boss::operator=(const Boss &boss) {
+    Employee::operator=(boss);
+    numberOfEmployees = boss.numberOfEmployees;
+
+    return *this;
+}

@@ -27,6 +27,9 @@ public:
     friend ostream& operator << (ostream& , const Boss&);
     friend istream& operator >> (istream& , Boss&);
 
+    //assign operator
+    Boss& operator = (const Boss &);
+
 };
 
 
