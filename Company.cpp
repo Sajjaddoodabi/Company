@@ -5,7 +5,7 @@ Company::Company() {
     budget = 0;
     boss = new Boss();
 
-    employee = new Employee*;
+    employee = new Employee *;
 //    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
 //            employee[i] = new Employee(*employee[i]);
 //    }
@@ -146,21 +146,40 @@ void Company::writeOnFile() {
     }
 }
 
-
-
 ostream &operator<<(ostream &strm, const Company &company) {
+
+    Employee *temp;
+    bool check = false;
+
+    for (int i = 0; i < company.boss->getNumberOfEmployees() && !check; ++i) {
+        check = true;
+        for (int j = 0; j < (company.boss->getNumberOfEmployees() - i - 1); ++j) {
+            if (company.employee[j]->getId().substr(0, 2) > company.employee[j + 1]->getId().substr(0, 2)) {
+                check = false;
+                temp = company.employee[j];
+                company.employee[j] = company.employee[j + 1];
+                company.employee[j + 1] = temp;
+            }
+            if (company.employee[j]->getId().substr(0, 2) == company.employee[j + 1]->getId().substr(0, 2)) {
+                if (company.employee[j]->getName() > company.employee[j + 1]->getName()) {
+                    check = false;
+                    temp = company.employee[j];
+                    company.employee[j] = company.employee[j + 1];
+                    company.employee[j + 1] = temp;
+                }
+            }
+        }
+    }
 
     cout << "Boss" << endl;
     strm << *company.boss;
     cout << "----------------------------" << endl;
 
     for (int i = 0; i < company.boss->getNumberOfEmployees(); ++i) {
-                cout << "employee[" << i + 1 << ']' << endl;
-                strm << *company.employee[i] << endl;
-                cout << "----------------------------" << endl;
-            }
-        }
-}
+        cout << "employee[" << i + 1 << ']' << endl;
+        strm << *company.employee[i] << endl;
+        cout << "----------------------------" << endl;
+    }
     return strm;
 }
 
@@ -177,3 +196,4 @@ istream &operator>>(istream &strm, Company &company) {
     }
     return strm;
 }
+
