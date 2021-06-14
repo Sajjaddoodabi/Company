@@ -43,6 +43,10 @@ public:
     void gift();
 
     void payForService();
+
+    //checking company's Financial conditions
+    bool isEnoughBudget();
+
 };
 
 
