@@ -19,6 +19,10 @@ public:
 
     //setter
     void setNumberOfEmployees(int noe);
+
+    //calculate salary (override)
+    int calculateSalary() override;
+
 };
 
 

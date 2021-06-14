@@ -1,5 +1,6 @@
 #include "Boss.h"
 
+//constructors
 Boss::Boss() : Employee() {
     numberOfEmployees = 0;
 }
@@ -10,14 +11,26 @@ Boss::Boss(const string &name, const string &id, const Address &address1, int hw
     numberOfEmployees = noe;
 }
 
+//copy constructor
 Boss::Boss(const Boss &boss) : Employee(boss) {
     numberOfEmployees = boss.numberOfEmployees;
 }
 
+//getter
 int Boss::getNumberOfEmployees() {
     return numberOfEmployees;
 }
 
+//setter
 void Boss::setNumberOfEmployees(int noe) {
     numberOfEmployees = noe;
+}
+
+//calculate salary (override) 
+int Boss::calculateSalary() {
+    int salary = Employee::calculateSalary();
+
+    salary += ((15 * salary) / 100);
+
+    return salary;
 }
