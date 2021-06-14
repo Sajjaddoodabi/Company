@@ -2,11 +2,18 @@
 
 //constructors
 Person::Person() {
+    setName(" ");
+    id = " ";
 
+    address.setStreet(" ");
+    address.setCity(" ");
+    address.setCountry(" ");
 }
 
 Person::Person(const string &na, const string &i, const Address &address1) {
-
+    setName(na);
+    setId(i);
+    setAddress(address1);
 }
 
 //copy constructor
