@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/sajja/CLionProjects/Company/Boss.h">
 			<Option target="Company"/>
 		</Unit>
+		<Unit filename="C:/Users/sajja/CLionProjects/Company/Company.cpp">
+			<Option target="Company"/>
+		</Unit>
+		<Unit filename="C:/Users/sajja/CLionProjects/Company/Company.h">
+			<Option target="Company"/>
+		</Unit>
 		<Unit filename="C:/Users/sajja/CLionProjects/Company/Employee.cpp">
 			<Option target="Company"/>
 		</Unit>
