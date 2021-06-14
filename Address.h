@@ -16,7 +16,15 @@ public:
     Address();
     Address(const string &srt , const string &ci , const string &con);
 
+    //getter
+    string getCountry();
+    string getCity();
+    string getStreet();
 
+    //setter
+    void setCountry(const string &);
+    void setCity(const string &);
+    void setStreet(const string &);
 };
 
 
