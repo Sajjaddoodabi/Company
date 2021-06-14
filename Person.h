@@ -42,6 +42,9 @@ public:
     friend ostream& operator << (ostream& ,const Person&);
     friend istream& operator >> (istream& , Person&);
 
+    //assign operators
+    virtual Person& operator = (const Person &);
+
 };
 
 #endif //COMPANY_PERSON_H

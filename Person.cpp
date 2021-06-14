@@ -142,3 +142,12 @@ istream &operator>>(istream &strm, Person &person) {
 
     return strm;
 }
+
+//assign operators
+Person &Person::operator=(const Person &person) {
+    name = person.name;
+    id = person.id;
+    address = person.address;
+
+    return *this;
+}
