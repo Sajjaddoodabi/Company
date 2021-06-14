@@ -15,21 +15,29 @@ public:
 
     //constructors
     Person();
-    Person(const string & na, const string & i ,const Address &address1);
+
+    Person(const string &na, const string &i, const Address &address1);
 
     //copy constructor
-    Person(const Person&);
+    Person(const Person &);
 
     //getter
     string getName();
+
     string getId();
+
     Address getAddress();
 
     //setter
     void setName(const string &);
-    void setId(const string &);
-    void setAddress(const Address &);
-};
 
+    void setId(const string &);
+
+    void setAddress(const Address &);
+
+    //checking if id is valid
+    virtual bool validate(string id);
+
+};
 
 #endif //COMPANY_PERSON_H
