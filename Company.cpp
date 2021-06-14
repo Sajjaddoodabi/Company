@@ -55,3 +55,13 @@ void Company::setBoss(Boss *boss1) {
 void Company::setEmployee(Employee** employee1) {
     employee = employee1;
 }
+
+//calculating max efficient employee
+Employee *Company::maxEfficiency() {
+    Employee *maxEfficient = employee[0];
+    for (int i = 1; i <= boss->getNumberOfEmployees(); ++i) {
+        if (maxEfficient->efficiency() < employee[i]->efficiency())
+            maxEfficient = employee[i];
+    }
+    return maxEfficient;
+}

@@ -29,6 +29,9 @@ public:
     void setBudget(int);
     void setBoss(Boss *);
     void setEmployee(Employee**);
+
+    //calculating max efficient employee
+    Employee *maxEfficiency();
 };
 
 
