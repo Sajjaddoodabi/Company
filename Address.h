@@ -11,6 +11,12 @@ private:
     string country;
     string city;
     string street;
+public:
+    //constructors
+    Address();
+    Address(const string &srt , const string &ci , const string &con);
+
+
 };
 
 
