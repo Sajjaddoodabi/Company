@@ -35,6 +35,9 @@ public:
 
     //company's average efficiency
     double averageEfficiency();
+
+    //changing inefficient boss
+    void changeBoss();
 };
 
 

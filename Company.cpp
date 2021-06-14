@@ -75,3 +75,19 @@ double Company::averageEfficiency() {
 
     return average;
 }
+
+//changing inefficient boss
+void Company::changeBoss() {
+    if (boss->efficiency() < 40) {
+        for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+            if (employee[i] == maxEfficiency()) {
+                int numberOfEmployee = boss->getNumberOfEmployees();
+                Employee *temp = boss;
+                boss = dynamic_cast<Boss *>(employee[i]);
+                employee[i] = temp;
+                boss->setNumberOfEmployees(numberOfEmployee);
+                break;
+            }
+        }
+    }
+}
