@@ -65,3 +65,13 @@ Employee *Company::maxEfficiency() {
     }
     return maxEfficient;
 }
+
+double Company::averageEfficiency() {
+    double average = 0;
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        average += employee[i]->efficiency();
+    }
+    average /= boss->getNumberOfEmployees();
+
+    return average;
+}

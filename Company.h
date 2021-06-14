@@ -32,6 +32,9 @@ public:
 
     //calculating max efficient employee
     Employee *maxEfficiency();
+
+    //company's average efficiency
+    double averageEfficiency();
 };
 
 
