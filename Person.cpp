@@ -112,3 +112,33 @@ bool Person::validate(string id) {
     }
     return true;
 }
+
+//io stream
+ostream &operator<<(ostream &strm, const Person &person) {
+    cout << "name: ";
+    strm << person.name;
+    cout << endl;
+
+    cout << "id: ";
+    strm << person.id;
+    cout << endl;
+
+    cout << "address: ";
+    strm << person.address;
+    cout << endl;
+
+    return strm;
+}
+
+istream &operator>>(istream &strm, Person &person) {
+    cout << "name: ";
+    strm >> person.name;
+
+    cout << "id: ";
+    strm >> person.id;
+
+    cout << "address: ";
+    strm >> person.address;
+
+    return strm;
+}

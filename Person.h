@@ -38,6 +38,10 @@ public:
     //checking if id is valid
     virtual bool validate(string id);
 
+    //io stream
+    friend ostream& operator << (ostream& ,const Person&);
+    friend istream& operator >> (istream& , Person&);
+
 };
 
 #endif //COMPANY_PERSON_H
