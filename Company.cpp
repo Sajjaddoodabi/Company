@@ -103,3 +103,11 @@ void Company::gift() {
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);
     }
 }
+
+void Company::payForService() {
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        if (employee[i]->getAddress().getCity() != "Tehran") {
+            employee[i]->setHourWork(employee[i]->getHourWork() + 7);
+        }
+    }
+}

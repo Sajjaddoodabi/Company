@@ -41,6 +41,8 @@ public:
 
     //gifting some hourWork
     void gift();
+
+    void payForService();
 };
 
 
