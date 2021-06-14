@@ -2,6 +2,7 @@
 #define COMPANY_COMPANY_H
 
 #include "Boss.h"
+#include <fstream>
 
 using namespace std;
 
@@ -46,6 +47,9 @@ public:
 
     //checking company's Financial conditions
     bool isEnoughBudget();
+
+    //filing details
+    void writeOnFile();
 
 };
 

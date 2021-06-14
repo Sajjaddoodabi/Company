@@ -123,3 +123,12 @@ bool Company::isEnoughBudget() {
     else
         return true;
 }
+
+void Company::writeOnFile() {
+    ofstream save("company.txt");
+
+    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
+        save << employee[i]->getName() << employee[i]->getId() << employee[i]->efficiency() <<
+             employee[i]->calculateSalary();
+    }
+}
