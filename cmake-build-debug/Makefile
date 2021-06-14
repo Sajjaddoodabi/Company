@@ -168,6 +168,33 @@ Address.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Address.cpp.s
 .PHONY : Address.cpp.s
 
+Person.obj: Person.cpp.obj
+
+.PHONY : Person.obj
+
+# target to build an object file
+Person.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Person.cpp.obj
+.PHONY : Person.cpp.obj
+
+Person.i: Person.cpp.i
+
+.PHONY : Person.i
+
+# target to preprocess a source file
+Person.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Person.cpp.i
+.PHONY : Person.cpp.i
+
+Person.s: Person.cpp.s
+
+.PHONY : Person.s
+
+# target to generate assembly for a file
+Person.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Company.dir\build.make CMakeFiles/Company.dir/Person.cpp.s
+.PHONY : Person.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -207,6 +234,9 @@ help:
 	@echo ... Address.obj
 	@echo ... Address.i
 	@echo ... Address.s
+	@echo ... Person.obj
+	@echo ... Person.i
+	@echo ... Person.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
