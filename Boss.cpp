@@ -13,3 +13,11 @@ Boss::Boss(const string &name, const string &id, const Address &address1, int hw
 Boss::Boss(const Boss &boss) : Employee(boss) {
     numberOfEmployees = boss.numberOfEmployees;
 }
+
+int Boss::getNumberOfEmployees() {
+    return numberOfEmployees;
+}
+
+void Boss::setNumberOfEmployees(int noe) {
+    numberOfEmployees = noe;
+}

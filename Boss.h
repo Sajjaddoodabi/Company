@@ -13,6 +13,12 @@ public:
 
     //copy constructor
     Boss(const Boss &);
+
+    //getter
+    int getNumberOfEmployees();
+
+    //setter
+    void setNumberOfEmployees(int noe);
 };
 
 
