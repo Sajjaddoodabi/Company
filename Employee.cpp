@@ -73,9 +73,9 @@ int Employee::calculateSalary() {
 }
 
 //function to calculate how efficient our employee is
-int Employee::efficiency() {
-    int efficiency;
-    efficiency = (workDone / workToDo) / hourWork ;
+double Employee::efficiency() {
+    double efficiency = 0;
+    efficiency += (workDone * workToDo) / hourWork ;
 
     return efficiency;
 }

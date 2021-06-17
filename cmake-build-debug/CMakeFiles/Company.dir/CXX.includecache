@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sajja/CLionProjects/Company/Address.h
+iostream
+-
+cstring
+-
+
+C:/Users/sajja/CLionProjects/Company/Boss.h
+Employee.h
+C:/Users/sajja/CLionProjects/Company/Employee.h
+
+C:/Users/sajja/CLionProjects/Company/Company.cpp
+Company.h
+C:/Users/sajja/CLionProjects/Company/Company.h
+
+C:/Users/sajja/CLionProjects/Company/Company.h
+Boss.h
+C:/Users/sajja/CLionProjects/Company/Boss.h
+fstream
+-
+
+C:/Users/sajja/CLionProjects/Company/Employee.h
+Person.h
+C:/Users/sajja/CLionProjects/Company/Person.h
+
+C:/Users/sajja/CLionProjects/Company/Person.h
+iostream
+-
+Address.h
+C:/Users/sajja/CLionProjects/Company/Address.h
+

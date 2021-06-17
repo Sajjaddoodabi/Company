@@ -1,16 +1,5 @@
 #include "Company.h"
 
-
-Company::Company() {
-    budget = 0;
-    boss = new Boss();
-
-    employee = new Employee *;
-//    for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
-//            employee[i] = new Employee(*employee[i]);
-//    }
-}
-
 Company::Company(int budget, Boss *boss1, Employee **employee1) {
     this->budget = budget;
 
@@ -90,28 +79,28 @@ double Company::averageEfficiency() {
 
 //changing inefficient boss
 void Company::changeBoss() {
+    Employee *maxEfficient = maxEfficiency();
     if (boss->efficiency() < 40) {
         for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
-            if (employee[i] == maxEfficiency()) {
-                int numberOfEmployee = boss->getNumberOfEmployees();
+            if (employee[i]->efficiency() == maxEfficient->efficiency()) {
+            int numberOfEmployee = boss->getNumberOfEmployees();
 
-                Employee *temp = employee[i];
-                employee[i] = static_cast<Employee *>(boss);
-                setBoss(dynamic_cast<Boss *>(temp));
+            Employee *temp = employee[i];
+            employee[i] = static_cast<Employee *>(boss);
+            setBoss(static_cast<Boss *>(temp));
 
-                boss->setNumberOfEmployees(numberOfEmployee);
-                break;
+            boss->setNumberOfEmployees(numberOfEmployee);
+            break;
             }
         }
     }
 }
 
-
 //gifting some hourWork
 void Company::gift() {
     for (int i = 0; i < boss->getNumberOfEmployees(); ++i) {
-        if (employee[i]->getId().substr(0, 2) < "90")
-            employee[i]->setHourWork(employee[i]->getHourWork() + 5);
+        if (employee[i]->getId().substr(0, 2) < "90") {}
+        employee[i]->setHourWork(employee[i]->getHourWork() + 5);
         if (employee[i] == maxEfficiency())
             employee[i]->setHourWork(employee[i]->getHourWork() + 10);
     }
@@ -144,6 +133,7 @@ void Company::writeOnFile() {
         save << employee[i]->getName() << employee[i]->getId() << employee[i]->efficiency() <<
              employee[i]->calculateSalary();
     }
+    cout << "Company's details saved on File!" << endl;
 }
 
 ostream &operator<<(ostream &strm, const Company &company) {
@@ -173,18 +163,18 @@ ostream &operator<<(ostream &strm, const Company &company) {
 
     cout << "Boss" << endl;
     strm << *company.boss;
-    cout << "----------------------------" << endl;
+    cout << "--------------------------------" << endl;
 
     for (int i = 0; i < company.boss->getNumberOfEmployees(); ++i) {
         cout << "employee[" << i + 1 << ']' << endl;
         strm << *company.employee[i] << endl;
-        cout << "----------------------------" << endl;
+        cout << "--------------------------------" << endl;
     }
     return strm;
 }
 
 istream &operator>>(istream &strm, Company &company) {
-    cout << "the budget: ";
+    cout << "the budget:";
     strm >> company.budget;
 
     cout << "boss:" << endl;

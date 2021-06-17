@@ -2,11 +2,10 @@
 #include "Company.h"
 
 using namespace std;
+
 int main() {
-    //Company company;
-    //cin >> company;
-//    cout << *company.getBoss();
-        Boss *boss = new Boss("Ali Mehrabi", "89*am12832", *(new Address("Iran", "Tehran", "Enghelab")), 5, 10000, 20, 25,
+
+    Boss *boss = new Boss("Ali Mehrabi", "89*am12832", *(new Address("Iran", "Tehran", "Enghelab")), 5, 10000, 20, 25,
                           10);
 
     Employee **employee = new Employee *[boss->getNumberOfEmployees()];
@@ -20,7 +19,8 @@ int main() {
                                5);
     employee[4] = new Employee("Masoud Rahmati", "88*qq93227", *(new Address("Iran", "Shiraz", "Fattah")), 11, 5500, 6,
                                6);
-    employee[5] = new Employee("Kaveh Moshiri", "85*rdg97320", *(new Address("Iran", "Shiraz", "Fattah")), 10, 11000, 14,
+    employee[5] = new Employee("Kaveh Moshiri", "85*rdg97320", *(new Address("Iran", "Shiraz", "Fattah")), 10, 11000,
+                               14,
                                12);
     employee[6] = new Employee("Bahram Sedighi", "98*sdf97320", *(new Address("Iran", "Shiraz", "Fattah")), 4, 3000, 10,
                                2);
@@ -30,16 +30,19 @@ int main() {
                                25, 19);
     employee[9] = new Employee("Mohammad Rad", "87*ox19280", *(new Address("Iran", "Shiraz", "Fattah")), 2, 4000, 30,
                                25);
-    //Company company(3000000, boss, employee);
 
-   Company company;
-   //cin >> company;
-   company.setEmployee(employee);
-    company.setBoss(boss);
+
+    Company company(3000000, boss, employee);
+    const Company &company1(company);
+
     cout << company;
 
+    cout << "Company's average efficiency: ";
+    cout << company.averageEfficiency();
+    cout << endl << "--------------------------------" << endl;
 
-//    cout << *company.getBoss();
-    //company.changeBoss();
+    company.writeOnFile();
+    cout << "--------------------------------" << endl;
+
     return 0;
 }

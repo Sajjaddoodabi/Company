@@ -33,7 +33,7 @@ public:
     virtual int calculateSalary();
 
     //function to calculate how efficient our employee is
-    int efficiency();
+    double efficiency();
 
     //overriding validate function
     bool validate(string id) override;
@@ -44,7 +44,6 @@ public:
 
     //assign operator
     Employee& operator = (const Employee &);
-
 };
 
 

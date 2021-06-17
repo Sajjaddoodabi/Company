@@ -13,7 +13,6 @@ private:
     Boss *boss;
 public:
     //constructor
-    Company();
     Company(int budget, Boss *boss1, Employee **employee1);
 
     //copy constructor
